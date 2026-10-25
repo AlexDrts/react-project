@@ -1,0 +1,885 @@
+{
+  "categories": [
+    {
+      "id": "t-shirts",
+      "name": "T-Shirts",
+      "icon": "👕"
+    },
+    {
+      "id": "hoodies",
+      "name": "Hoodies",
+      "icon": "🧶"
+    },
+    {
+      "id": "jackets",
+      "name": "Jackets",
+      "icon": "🧥"
+    },
+    {
+      "id": "jeans",
+      "name": "Jeans",
+      "icon": "👖"
+    },
+    {
+      "id": "sneakers",
+      "name": "Sneakers",
+      "icon": "👟"
+    },
+    {
+      "id": "accessories",
+      "name": "Accessories",
+      "icon": "🧢"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "type": "clothing",
+      "name": "Oversized Graphic Tee",
+      "categoryId": "t-shirts",
+      "gender": "unisex",
+      "price": 34,
+      "oldPrice": null,
+      "rating": 4.7,
+      "inStock": true,
+      "colors": [
+        "#ff4fa3",
+        "#7b2cbf"
+      ],
+      "description": "Oversized Graphic Tee from the AFTERGLOW autumn drop. Made from 100% organic cotton and cut to hold its shape after hundreds of wears.",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "material": "100% organic cotton"
+    },
+    {
+      "id": 2,
+      "type": "clothing",
+      "name": "Essential Cotton Tee",
+      "categoryId": "t-shirts",
+      "gender": "men",
+      "price": 24,
+      "oldPrice": null,
+      "rating": 4.4,
+      "inStock": true,
+      "colors": [
+        "#ffb3d9",
+        "#c2306b"
+      ],
+      "description": "Essential Cotton Tee from the AFTERGLOW night drop. Made from 100% cotton and cut to hold its shape after hundreds of wears.",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "material": "100% cotton"
+    },
+    {
+      "id": 3,
+      "type": "clothing",
+      "name": "Neon Pulse Tee",
+      "categoryId": "t-shirts",
+      "gender": "unisex",
+      "price": 39,
+      "oldPrice": 49,
+      "rating": 4.8,
+      "inStock": true,
+      "colors": [
+        "#7b2cbf",
+        "#2b0f3e"
+      ],
+      "description": "Neon Pulse Tee from the AFTERGLOW dusk drop. Made from cotton, 5% elastane and cut to hold its shape after hundreds of wears.",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "material": "Cotton, 5% elastane"
+    },
+    {
+      "id": 4,
+      "type": "clothing",
+      "name": "Washed Vintage Tee",
+      "categoryId": "t-shirts",
+      "gender": "men",
+      "price": 36,
+      "oldPrice": null,
+      "rating": 4.5,
+      "inStock": true,
+      "colors": [
+        "#f72585",
+        "#3a0ca3"
+      ],
+      "description": "Washed Vintage Tee from the AFTERGLOW autumn drop. Made from garment-washed cotton and cut to hold its shape after hundreds of wears.",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "material": "Garment-washed cotton"
+    },
+    {
+      "id": 5,
+      "type": "clothing",
+      "name": "Cropped Rib Tee",
+      "categoryId": "t-shirts",
+      "gender": "women",
+      "price": 28,
+      "oldPrice": null,
+      "rating": 4.6,
+      "inStock": true,
+      "colors": [
+        "#ff8fab",
+        "#6a0572"
+      ],
+      "description": "Cropped Rib Tee from the AFTERGLOW night drop. Made from ribbed cotton blend and cut to hold its shape after hundreds of wears.",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "material": "Ribbed cotton blend"
+    },
+    {
+      "id": 6,
+      "type": "clothing",
+      "name": "Longline Basic Tee",
+      "categoryId": "t-shirts",
+      "gender": "women",
+      "price": 29,
+      "oldPrice": 35,
+      "rating": 4.2,
+      "inStock": false,
+      "colors": [
+        "#c77dff",
+        "#240046"
+      ],
+      "description": "Longline Basic Tee from the AFTERGLOW dusk drop. Made from soft modal and cut to hold its shape after hundreds of wears.",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "material": "Soft modal"
+    },
+    {
+      "id": 7,
+      "type": "clothing",
+      "name": "Midnight Heavyweight Hoodie",
+      "categoryId": "hoodies",
+      "gender": "unisex",
+      "price": 79,
+      "oldPrice": null,
+      "rating": 4.9,
+      "inStock": true,
+      "colors": [
+        "#ff6b9d",
+        "#8a1c52"
+      ],
+      "description": "Midnight Heavyweight Hoodie from the AFTERGLOW autumn drop. Made from 450 gsm brushed fleece and cut to hold its shape after hundreds of wears.",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "material": "450 gsm brushed fleece"
+    },
+    {
+      "id": 8,
+      "type": "clothing",
+      "name": "Sunset Gradient Hoodie",
+      "categoryId": "hoodies",
+      "gender": "unisex",
+      "price": 89,
+      "oldPrice": 109,
+      "rating": 4.8,
+      "inStock": true,
+      "colors": [
+        "#e0aaff",
+        "#5a189a"
+      ],
+      "description": "Sunset Gradient Hoodie from the AFTERGLOW night drop. Made from dip-dyed cotton fleece and cut to hold its shape after hundreds of wears.",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "material": "Dip-dyed cotton fleece"
+    },
+    {
+      "id": 9,
+      "type": "clothing",
+      "name": "Zip-Up Fleece Hoodie",
+      "categoryId": "hoodies",
+      "gender": "men",
+      "price": 74,
+      "oldPrice": null,
+      "rating": 4.5,
+      "inStock": true,
+      "colors": [
+        "#ff4fa3",
+        "#7b2cbf"
+      ],
+      "description": "Zip-Up Fleece Hoodie from the AFTERGLOW dusk drop. Made from recycled polyester fleece and cut to hold its shape after hundreds of wears.",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "material": "Recycled polyester fleece"
+    },
+    {
+      "id": 10,
+      "type": "clothing",
+      "name": "Cropped Boxy Hoodie",
+      "categoryId": "hoodies",
+      "gender": "women",
+      "price": 64,
+      "oldPrice": null,
+      "rating": 4.6,
+      "inStock": true,
+      "colors": [
+        "#ffb3d9",
+        "#c2306b"
+      ],
+      "description": "Cropped Boxy Hoodie from the AFTERGLOW autumn drop. Made from cotton terry and cut to hold its shape after hundreds of wears.",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "material": "Cotton terry"
+    },
+    {
+      "id": 11,
+      "type": "clothing",
+      "name": "Velvet Touch Hoodie",
+      "categoryId": "hoodies",
+      "gender": "women",
+      "price": 95,
+      "oldPrice": null,
+      "rating": 4.7,
+      "inStock": true,
+      "colors": [
+        "#7b2cbf",
+        "#2b0f3e"
+      ],
+      "description": "Velvet Touch Hoodie from the AFTERGLOW night drop. Made from velour and cut to hold its shape after hundreds of wears.",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "material": "Velour"
+    },
+    {
+      "id": 12,
+      "type": "clothing",
+      "name": "Classic Pullover Hoodie",
+      "categoryId": "hoodies",
+      "gender": "men",
+      "price": 59,
+      "oldPrice": 72,
+      "rating": 4.3,
+      "inStock": true,
+      "colors": [
+        "#f72585",
+        "#3a0ca3"
+      ],
+      "description": "Classic Pullover Hoodie from the AFTERGLOW dusk drop. Made from cotton fleece and cut to hold its shape after hundreds of wears.",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "material": "Cotton fleece"
+    },
+    {
+      "id": 13,
+      "type": "clothing",
+      "name": "Bomber Jacket",
+      "categoryId": "jackets",
+      "gender": "unisex",
+      "price": 129,
+      "oldPrice": null,
+      "rating": 4.7,
+      "inStock": true,
+      "colors": [
+        "#ff8fab",
+        "#6a0572"
+      ],
+      "description": "Bomber Jacket from the AFTERGLOW autumn drop. Made from nylon shell, satin lining and cut to hold its shape after hundreds of wears.",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "material": "Nylon shell, satin lining"
+    },
+    {
+      "id": 14,
+      "type": "clothing",
+      "name": "Quilted Puffer Jacket",
+      "categoryId": "jackets",
+      "gender": "women",
+      "price": 159,
+      "oldPrice": 189,
+      "rating": 4.8,
+      "inStock": true,
+      "colors": [
+        "#c77dff",
+        "#240046"
+      ],
+      "description": "Quilted Puffer Jacket from the AFTERGLOW night drop. Made from recycled fill, ripstop shell and cut to hold its shape after hundreds of wears.",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "material": "Recycled fill, ripstop shell"
+    },
+    {
+      "id": 15,
+      "type": "clothing",
+      "name": "Denim Trucker Jacket",
+      "categoryId": "jackets",
+      "gender": "men",
+      "price": 119,
+      "oldPrice": null,
+      "rating": 4.6,
+      "inStock": true,
+      "colors": [
+        "#ff6b9d",
+        "#8a1c52"
+      ],
+      "description": "Denim Trucker Jacket from the AFTERGLOW dusk drop. Made from 12 oz rigid denim and cut to hold its shape after hundreds of wears.",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "material": "12 oz rigid denim"
+    },
+    {
+      "id": 16,
+      "type": "clothing",
+      "name": "Windbreaker Shell",
+      "categoryId": "jackets",
+      "gender": "unisex",
+      "price": 99,
+      "oldPrice": null,
+      "rating": 4.4,
+      "inStock": true,
+      "colors": [
+        "#e0aaff",
+        "#5a189a"
+      ],
+      "description": "Windbreaker Shell from the AFTERGLOW autumn drop. Made from water-repellent nylon and cut to hold its shape after hundreds of wears.",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "material": "Water-repellent nylon"
+    },
+    {
+      "id": 17,
+      "type": "clothing",
+      "name": "Faux Leather Biker",
+      "categoryId": "jackets",
+      "gender": "women",
+      "price": 149,
+      "oldPrice": null,
+      "rating": 4.5,
+      "inStock": false,
+      "colors": [
+        "#ff4fa3",
+        "#7b2cbf"
+      ],
+      "description": "Faux Leather Biker from the AFTERGLOW night drop. Made from vegan leather and cut to hold its shape after hundreds of wears.",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "material": "Vegan leather"
+    },
+    {
+      "id": 18,
+      "type": "clothing",
+      "name": "Wool Blend Overcoat",
+      "categoryId": "jackets",
+      "gender": "men",
+      "price": 219,
+      "oldPrice": 259,
+      "rating": 4.9,
+      "inStock": true,
+      "colors": [
+        "#ffb3d9",
+        "#c2306b"
+      ],
+      "description": "Wool Blend Overcoat from the AFTERGLOW dusk drop. Made from 70% wool, 30% polyamide and cut to hold its shape after hundreds of wears.",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "material": "70% wool, 30% polyamide"
+    },
+    {
+      "id": 19,
+      "type": "clothing",
+      "name": "Slim Fit Black Jeans",
+      "categoryId": "jeans",
+      "gender": "men",
+      "price": 69,
+      "oldPrice": null,
+      "rating": 4.5,
+      "inStock": true,
+      "colors": [
+        "#7b2cbf",
+        "#2b0f3e"
+      ],
+      "description": "Slim Fit Black Jeans from the AFTERGLOW autumn drop. Made from stretch denim and cut to hold its shape after hundreds of wears.",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "material": "Stretch denim"
+    },
+    {
+      "id": 20,
+      "type": "clothing",
+      "name": "Wide Leg Indigo Jeans",
+      "categoryId": "jeans",
+      "gender": "women",
+      "price": 79,
+      "oldPrice": null,
+      "rating": 4.7,
+      "inStock": true,
+      "colors": [
+        "#f72585",
+        "#3a0ca3"
+      ],
+      "description": "Wide Leg Indigo Jeans from the AFTERGLOW night drop. Made from rigid denim and cut to hold its shape after hundreds of wears.",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "material": "Rigid denim"
+    },
+    {
+      "id": 21,
+      "type": "clothing",
+      "name": "Straight Stone Wash Jeans",
+      "categoryId": "jeans",
+      "gender": "men",
+      "price": 74,
+      "oldPrice": 89,
+      "rating": 4.4,
+      "inStock": true,
+      "colors": [
+        "#ff8fab",
+        "#6a0572"
+      ],
+      "description": "Straight Stone Wash Jeans from the AFTERGLOW dusk drop. Made from stone-washed denim and cut to hold its shape after hundreds of wears.",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "material": "Stone-washed denim"
+    },
+    {
+      "id": 22,
+      "type": "clothing",
+      "name": "Baggy Carpenter Jeans",
+      "categoryId": "jeans",
+      "gender": "unisex",
+      "price": 84,
+      "oldPrice": null,
+      "rating": 4.6,
+      "inStock": true,
+      "colors": [
+        "#c77dff",
+        "#240046"
+      ],
+      "description": "Baggy Carpenter Jeans from the AFTERGLOW autumn drop. Made from heavy cotton twill and cut to hold its shape after hundreds of wears.",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "material": "Heavy cotton twill"
+    },
+    {
+      "id": 23,
+      "type": "clothing",
+      "name": "High Rise Mom Jeans",
+      "categoryId": "jeans",
+      "gender": "women",
+      "price": 72,
+      "oldPrice": null,
+      "rating": 4.8,
+      "inStock": true,
+      "colors": [
+        "#ff6b9d",
+        "#8a1c52"
+      ],
+      "description": "High Rise Mom Jeans from the AFTERGLOW night drop. Made from non-stretch denim and cut to hold its shape after hundreds of wears.",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "material": "Non-stretch denim"
+    },
+    {
+      "id": 24,
+      "type": "clothing",
+      "name": "Skinny Stretch Jeans",
+      "categoryId": "jeans",
+      "gender": "women",
+      "price": 64,
+      "oldPrice": 79,
+      "rating": 4.1,
+      "inStock": true,
+      "colors": [
+        "#e0aaff",
+        "#5a189a"
+      ],
+      "description": "Skinny Stretch Jeans from the AFTERGLOW dusk drop. Made from stretch denim and cut to hold its shape after hundreds of wears.",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "material": "Stretch denim"
+    },
+    {
+      "id": 25,
+      "type": "footwear",
+      "name": "Pulse Runner Sneakers",
+      "categoryId": "sneakers",
+      "gender": "unisex",
+      "price": 119,
+      "oldPrice": null,
+      "rating": 4.8,
+      "inStock": true,
+      "colors": [
+        "#ff4fa3",
+        "#7b2cbf"
+      ],
+      "description": "Pulse Runner Sneakers from the AFTERGLOW autumn drop. Made from knit upper, foam midsole and cut to hold its shape after hundreds of wears.",
+      "sizes": [
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44",
+        "45"
+      ],
+      "sole": "Lightweight foam"
+    },
+    {
+      "id": 26,
+      "type": "footwear",
+      "name": "Court Classic Low",
+      "categoryId": "sneakers",
+      "gender": "unisex",
+      "price": 99,
+      "oldPrice": null,
+      "rating": 4.7,
+      "inStock": true,
+      "colors": [
+        "#ffb3d9",
+        "#c2306b"
+      ],
+      "description": "Court Classic Low from the AFTERGLOW night drop. Made from leather upper and cut to hold its shape after hundreds of wears.",
+      "sizes": [
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44",
+        "45"
+      ],
+      "sole": "Rubber cupsole"
+    },
+    {
+      "id": 27,
+      "type": "footwear",
+      "name": "Chunky Platform Sneakers",
+      "categoryId": "sneakers",
+      "gender": "women",
+      "price": 129,
+      "oldPrice": 149,
+      "rating": 4.6,
+      "inStock": true,
+      "colors": [
+        "#7b2cbf",
+        "#2b0f3e"
+      ],
+      "description": "Chunky Platform Sneakers from the AFTERGLOW dusk drop. Made from leather and suede and cut to hold its shape after hundreds of wears.",
+      "sizes": [
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44",
+        "45"
+      ],
+      "sole": "Rubber cupsole"
+    },
+    {
+      "id": 28,
+      "type": "footwear",
+      "name": "Trail High-Tops",
+      "categoryId": "sneakers",
+      "gender": "men",
+      "price": 139,
+      "oldPrice": null,
+      "rating": 4.5,
+      "inStock": true,
+      "colors": [
+        "#f72585",
+        "#3a0ca3"
+      ],
+      "description": "Trail High-Tops from the AFTERGLOW autumn drop. Made from waterproof nubuck and cut to hold its shape after hundreds of wears.",
+      "sizes": [
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44",
+        "45"
+      ],
+      "sole": "Lightweight foam"
+    },
+    {
+      "id": 29,
+      "type": "footwear",
+      "name": "Mesh Training Shoes",
+      "categoryId": "sneakers",
+      "gender": "unisex",
+      "price": 89,
+      "oldPrice": null,
+      "rating": 4.3,
+      "inStock": true,
+      "colors": [
+        "#ff8fab",
+        "#6a0572"
+      ],
+      "description": "Mesh Training Shoes from the AFTERGLOW night drop. Made from breathable mesh and cut to hold its shape after hundreds of wears.",
+      "sizes": [
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44",
+        "45"
+      ],
+      "sole": "Lightweight foam"
+    },
+    {
+      "id": 30,
+      "type": "footwear",
+      "name": "Canvas Slip-Ons",
+      "categoryId": "sneakers",
+      "gender": "unisex",
+      "price": 54,
+      "oldPrice": 65,
+      "rating": 4.2,
+      "inStock": false,
+      "colors": [
+        "#c77dff",
+        "#240046"
+      ],
+      "description": "Canvas Slip-Ons from the AFTERGLOW dusk drop. Made from organic canvas and cut to hold its shape after hundreds of wears.",
+      "sizes": [
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44",
+        "45"
+      ],
+      "sole": "Lightweight foam"
+    },
+    {
+      "id": 31,
+      "type": "accessory",
+      "name": "Embroidered Baseball Cap",
+      "categoryId": "accessories",
+      "gender": "unisex",
+      "price": 29,
+      "oldPrice": null,
+      "rating": 4.5,
+      "inStock": true,
+      "colors": [
+        "#ff6b9d",
+        "#8a1c52"
+      ],
+      "description": "Embroidered Baseball Cap from the AFTERGLOW autumn drop. Made from cotton twill and cut to hold its shape after hundreds of wears.",
+      "sizes": [],
+      "material": "Cotton twill"
+    },
+    {
+      "id": 32,
+      "type": "accessory",
+      "name": "Wool Beanie",
+      "categoryId": "accessories",
+      "gender": "unisex",
+      "price": 24,
+      "oldPrice": null,
+      "rating": 4.6,
+      "inStock": true,
+      "colors": [
+        "#e0aaff",
+        "#5a189a"
+      ],
+      "description": "Wool Beanie from the AFTERGLOW night drop. Made from merino wool and cut to hold its shape after hundreds of wears.",
+      "sizes": [],
+      "material": "Merino wool"
+    },
+    {
+      "id": 33,
+      "type": "accessory",
+      "name": "Leather Belt",
+      "categoryId": "accessories",
+      "gender": "unisex",
+      "price": 45,
+      "oldPrice": null,
+      "rating": 4.4,
+      "inStock": true,
+      "colors": [
+        "#ff4fa3",
+        "#7b2cbf"
+      ],
+      "description": "Leather Belt from the AFTERGLOW dusk drop. Made from full-grain leather and cut to hold its shape after hundreds of wears.",
+      "sizes": [],
+      "material": "Full-grain leather"
+    },
+    {
+      "id": 34,
+      "type": "accessory",
+      "name": "Canvas Tote Bag",
+      "categoryId": "accessories",
+      "gender": "unisex",
+      "price": 32,
+      "oldPrice": 40,
+      "rating": 4.7,
+      "inStock": true,
+      "colors": [
+        "#ffb3d9",
+        "#c2306b"
+      ],
+      "description": "Canvas Tote Bag from the AFTERGLOW autumn drop. Made from heavy canvas and cut to hold its shape after hundreds of wears.",
+      "sizes": [],
+      "material": "Heavy canvas"
+    },
+    {
+      "id": 35,
+      "type": "accessory",
+      "name": "Crossbody Bag",
+      "categoryId": "accessories",
+      "gender": "women",
+      "price": 69,
+      "oldPrice": null,
+      "rating": 4.6,
+      "inStock": true,
+      "colors": [
+        "#7b2cbf",
+        "#2b0f3e"
+      ],
+      "description": "Crossbody Bag from the AFTERGLOW night drop. Made from vegan leather and cut to hold its shape after hundreds of wears.",
+      "sizes": [],
+      "material": "Vegan leather"
+    },
+    {
+      "id": 36,
+      "type": "accessory",
+      "name": "Knit Scarf",
+      "categoryId": "accessories",
+      "gender": "unisex",
+      "price": 38,
+      "oldPrice": null,
+      "rating": 4.5,
+      "inStock": true,
+      "colors": [
+        "#f72585",
+        "#3a0ca3"
+      ],
+      "description": "Knit Scarf from the AFTERGLOW dusk drop. Made from lambswool and cut to hold its shape after hundreds of wears.",
+      "sizes": [],
+      "material": "Lambswool"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Alex",
+      "email": "alex@afterglow.dev",
+      "role": "admin"
+    }
+  ],
+  "orders": []
+}

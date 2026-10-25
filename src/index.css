@@ -1,0 +1,315 @@
+@import "tailwindcss";
+
+/* ---------- Tokens: both themes share the avatar palette (magenta, pink, purple) ---------- */
+
+@theme inline {
+  --font-display: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Figtree", ui-sans-serif, system-ui, sans-serif;
+
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-line: var(--line);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-2: var(--accent-2);
+  --color-accent-soft: var(--accent-soft);
+  --color-on-accent: var(--on-accent);
+  --color-danger: var(--danger);
+  --color-ok: var(--ok);
+}
+
+:root,
+[data-theme="light"] {
+  color-scheme: light;
+  --bg: #fff6fa;
+  --surface: #ffffff;
+  --surface-2: #fdeaf3;
+  --line: #f0d3e2;
+  --fg: #24122f;
+  --muted: #6d5a7a;
+  --accent: #c4146a;
+  --accent-2: #6a1fa8;
+  --accent-soft: #ffdcee;
+  --on-accent: #ffffff;
+  --danger: #c0182e;
+  --ok: #0f7a4b;
+  --glow: rgba(196, 20, 106, 0.22);
+  --hero-from: #ffd6ea;
+  --hero-to: #f3b6d6;
+  --sun-top: #ffd0e6;
+  --sun-mid: #ff5fa8;
+  --sun-bottom: #c4146a;
+  --horizon: rgba(106, 31, 168, 0.28);
+  --hero-fg: #2b0f3e;
+  --hero-btn-bg: #2b0f3e;
+  --hero-btn-fg: #ffffff;
+  --hero-line: rgba(43, 15, 62, 0.45);
+  --hero-hover: rgba(43, 15, 62, 0.08);
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #0c0f16;
+  --surface: #141824;
+  --surface-2: #1b2030;
+  --line: #2a2f44;
+  --fg: #ece9f4;
+  --muted: #a29fb8;
+  --accent: #ff4fa3;
+  --accent-2: #c77dff;
+  --accent-soft: #3a1030;
+  --on-accent: #1a0614;
+  --danger: #ff7a8a;
+  --ok: #5fe0a2;
+  --glow: rgba(255, 79, 163, 0.35);
+  --hero-from: #2b0f3e;
+  --hero-to: #8a1c52;
+  --sun-top: #ffb3d9;
+  --sun-mid: #ff4fa3;
+  --sun-bottom: #c2306b;
+  --horizon: rgba(199, 125, 255, 0.35);
+  --hero-fg: #ffffff;
+  --hero-btn-bg: #ffffff;
+  --hero-btn-fg: #24122f;
+  --hero-line: rgba(255, 255, 255, 0.5);
+  --hero-hover: rgba(255, 255, 255, 0.1);
+}
+
+/* ---------- Base ---------- */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--on-accent);
+}
+
+/* ---------- Shared building blocks ---------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 0.65rem;
+  padding: 0.6rem 1.1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.2;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: filter 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+.btn-primary {
+  background: var(--accent);
+  color: var(--on-accent);
+}
+.btn-primary:not(:disabled):hover {
+  filter: brightness(1.08);
+  box-shadow: 0 0 22px var(--glow);
+}
+.btn-ghost {
+  background: transparent;
+  color: var(--fg);
+  border-color: var(--line);
+}
+.btn-ghost:not(:disabled):hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.btn-danger {
+  background: transparent;
+  color: var(--danger);
+  border-color: var(--danger);
+}
+.btn-sm {
+  padding: 0.35rem 0.7rem;
+  font-size: 0.8rem;
+}
+
+.input {
+  width: 100%;
+  background: var(--surface);
+  color: var(--fg);
+  border: 1px solid var(--line);
+  border-radius: 0.65rem;
+  padding: 0.6rem 0.8rem;
+  font-size: 0.95rem;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.input::placeholder {
+  color: var(--muted);
+  opacity: 0.8;
+}
+.input:focus-visible {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--glow);
+  outline: none;
+}
+.input[aria-invalid="true"] {
+  border-color: var(--danger);
+}
+.input:disabled {
+  opacity: 0.6;
+}
+
+.field-label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.field-error {
+  display: block;
+  margin-top: 0.3rem;
+  font-size: 0.8rem;
+  color: var(--danger);
+}
+
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+}
+
+/* ---------- Hero: the sun from the avatar, sinking behind a neon horizon ---------- */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background: linear-gradient(115deg, var(--hero-from), var(--hero-to));
+  border-radius: 1.5rem;
+}
+
+.hero {
+  color: var(--hero-fg);
+}
+.hero-copy {
+  opacity: 0.85;
+}
+.btn-hero {
+  background: var(--hero-btn-bg);
+  color: var(--hero-btn-fg);
+}
+.btn-hero:hover {
+  filter: brightness(1.15);
+}
+.btn-hero-ghost {
+  color: var(--hero-fg);
+  border-color: var(--hero-line);
+}
+.btn-hero-ghost:hover {
+  background: var(--hero-hover);
+}
+
+.hero-sun {
+  position: absolute;
+  right: clamp(-4rem, 4vw, 4rem);
+  top: 50%;
+  width: clamp(14rem, 34vw, 24rem);
+  aspect-ratio: 1;
+  --sun-y: -52%;
+  translate: 0 var(--sun-y);
+  border-radius: 50%;
+  background: linear-gradient(to bottom, var(--sun-top) 0%, var(--sun-mid) 55%, var(--sun-bottom) 100%);
+  box-shadow: 0 0 80px var(--glow);
+  -webkit-mask:
+    linear-gradient(#000, #000) top / 100% 55% no-repeat,
+    repeating-linear-gradient(to bottom, #000 0 11px, transparent 11px 18px) bottom / 100% 45% no-repeat;
+  mask:
+    linear-gradient(#000, #000) top / 100% 55% no-repeat,
+    repeating-linear-gradient(to bottom, #000 0 11px, transparent 11px 18px) bottom / 100% 45% no-repeat;
+  z-index: -1;
+  animation: sun-rise 1.4s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+.hero-horizon {
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 38%;
+  background:
+    repeating-linear-gradient(to right, var(--horizon) 0 1px, transparent 1px 48px),
+    repeating-linear-gradient(to bottom, var(--horizon) 0 1px, transparent 1px 22px);
+  -webkit-mask-image: linear-gradient(to top, #000, transparent);
+  mask-image: linear-gradient(to top, #000, transparent);
+  z-index: -1;
+}
+
+@keyframes sun-rise {
+  from {
+    opacity: 0;
+    translate: 0 calc(var(--sun-y) + 22%);
+  }
+  to {
+    opacity: 1;
+    translate: 0 var(--sun-y);
+  }
+}
+
+/* On phones the sun sets below the text instead of behind it. */
+@media (max-width: 639px) {
+  .hero-sun {
+    --sun-y: 0%;
+    top: auto;
+    bottom: -3.5rem;
+    right: -3rem;
+    width: 12rem;
+  }
+}
+
+@keyframes shimmer {
+  from {
+    background-position: 200% 0;
+  }
+  to {
+    background-position: -200% 0;
+  }
+}
+
+.skeleton {
+  background: linear-gradient(90deg, var(--surface-2) 25%, var(--line) 50%, var(--surface-2) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.6s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .hero-sun,
+  .skeleton {
+    animation: none;
+  }
+  * {
+    transition-duration: 0.01ms !important;
+  }
+}
