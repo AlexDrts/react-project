@@ -1,5 +1,6 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useDispatch, useSelector } from "react-redux";
+import { useOutletContext } from "react-router-dom";
 import { fetchUsers, registerUser } from "../../api/shopApi";
 import { logout, setUser } from "../../store/userSlice";
 import ErrorMessage from "../ui/ErrorMessage";
@@ -7,7 +8,8 @@ import Loader from "../ui/Loader";
 import UserList from "./UserList";
 import UserRegisterForm from "./UserRegisterForm";
 
-export default function AdminUsers({ dispatch: adminDispatch }) {
+export default function AdminUsers() {
+  const { dispatch: adminDispatch } = useOutletContext();
   const queryClient = useQueryClient();
   const reduxDispatch = useDispatch();
   const current = useSelector((state) => state.user.current);

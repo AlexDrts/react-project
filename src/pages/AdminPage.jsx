@@ -1,12 +1,16 @@
 import { useEffect, useReducer } from "react";
-import AdminCategories from "../components/admin/AdminCategories";
-import AdminProducts from "../components/admin/AdminProducts";
-import AdminUsers from "../components/admin/AdminUsers";
+import { NavLink, Outlet, useLocation } from "react-router-dom";
 import { ADMIN_TABS, adminReducer, initialAdminState } from "../components/admin/adminReducer";
+import { tabLinkClass } from "../components/ui/tabLinkClass";
 
 export default function AdminPage() {
   const [state, dispatch] = useReducer(adminReducer, initialAdminState);
-  const { tab, editor, notice } = state;
+  const { editor, notice } = state;
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    dispatch({ type: "reset" });
+  }, [pathname]);
 
   // Messages fade out by themselves.
   useEffect(() => {
@@ -20,24 +24,13 @@ export default function AdminPage() {
       <h1 className="text-3xl font-extrabold">Admin</h1>
       <p className="mt-1 text-sm text-muted">Manage products, categories and users. Changes are saved to the API right away.</p>
 
-      <div role="tablist" aria-label="Admin sections" className="mt-6 flex gap-1 border-b border-line">
+      <nav aria-label="Admin sections" className="mt-6 flex gap-1 border-b border-line">
         {ADMIN_TABS.map((item) => (
-          <button
-            key={item.id}
-            type="button"
-            role="tab"
-            id={`tab-${item.id}`}
-            aria-selected={tab === item.id}
-            aria-controls={`panel-${item.id}`}
-            onClick={() => dispatch({ type: "set_tab", tab: item.id })}
-            className={`-mb-px border-b-2 px-4 py-2.5 text-sm font-semibold transition-colors ${
-              tab === item.id ? "border-accent text-accent" : "border-transparent text-muted hover:text-fg"
-            }`}
-          >
+          <NavLink key={item.id} to={`/admin/${item.id}`} className={tabLinkClass}>
             {item.label}
-          </button>
+          </NavLink>
         ))}
-      </div>
+      </nav>
 
       {notice && (
         <p
@@ -48,10 +41,8 @@ export default function AdminPage() {
         </p>
       )}
 
-      <div role="tabpanel" id={`panel-${tab}`} aria-labelledby={`tab-${tab}`} className="mt-6">
-        {tab === "products" && <AdminProducts editor={editor} dispatch={dispatch} />}
-        {tab === "categories" && <AdminCategories editor={editor} dispatch={dispatch} />}
-        {tab === "users" && <AdminUsers dispatch={dispatch} />}
+      <div className="mt-6">
+        <Outlet context={{ editor, dispatch }} />
       </div>
     </>
   );

@@ -9,7 +9,7 @@ export default function CartItem({ line, onChangeQty, onRemove }) {
   return (
     <li className="panel flex gap-4 p-3 sm:p-4">
       <Link
-        to={`/product/${line.productId}`}
+        to={`/products/${line.productId}`}
         className="grid size-20 shrink-0 place-items-center rounded-xl text-3xl sm:size-24"
         style={{ background: `linear-gradient(155deg, ${from}, ${to})` }}
         aria-label={`Open ${line.name}`}
@@ -21,7 +21,7 @@ export default function CartItem({ line, onChangeQty, onRemove }) {
         <div className="flex items-start justify-between gap-3">
           <div className="min-w-0">
             <h3 className="truncate font-bold">
-              <Link to={`/product/${line.productId}`} className="hover:text-accent">
+              <Link to={`/products/${line.productId}`} className="hover:text-accent">
                 {line.name}
               </Link>
             </h3>

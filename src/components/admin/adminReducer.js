@@ -5,13 +5,13 @@ export const ADMIN_TABS = [
 ];
 
 // editor: null (closed) or { kind: "product" | "category", item: object | null }  (item null = create new)
-export const initialAdminState = { tab: "products", editor: null, notice: null };
+export const initialAdminState = { editor: null, notice: null };
 
-/** State of the whole admin panel: current tab, which editor is open, and the last message. */
+/** State of the admin panel: which editor is open and the last message. The current section lives in the URL. */
 export function adminReducer(state, action) {
   switch (action.type) {
-    case "set_tab":
-      return { ...state, tab: action.tab, editor: null, notice: null };
+    case "reset":
+      return initialAdminState;
     case "open_editor":
       return { ...state, editor: { kind: action.kind, item: action.item ?? null }, notice: null };
     case "close_editor":

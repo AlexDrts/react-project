@@ -1,5 +1,6 @@
 import { useMemo } from "react";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { useOutletContext } from "react-router-dom";
 import { removeProduct } from "../../api/shopApi";
 import { useConfirm } from "../../hooks/useConfirm";
 import { useAllProducts, useCategories } from "../../hooks/useShopQueries";
@@ -10,7 +11,8 @@ import Loader from "../ui/Loader";
 import AdminProductTable from "./AdminProductTable";
 import ProductForm from "./ProductForm";
 
-export default function AdminProducts({ editor, dispatch }) {
+export default function AdminProducts() {
+  const { editor, dispatch } = useOutletContext();
   const queryClient = useQueryClient();
   const products = useAllProducts();
   const categories = useCategories();

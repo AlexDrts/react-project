@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 import { flushSync } from "react-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { Navigate } from "react-router-dom";
-import { useMutation } from "@tanstack/react-query";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { postOrder } from "../api/shopApi";
 import { useCart } from "../hooks/useCart";
 import { Order } from "../models";
@@ -18,7 +18,11 @@ export default function CheckoutPage() {
   const [placedOrder, setPlacedOrder] = useState(null);
   const [serverError, setServerError] = useState(null);
   const topRef = useRef(null);
-  const orderMutation = useMutation({ mutationFn: postOrder });
+  const queryClient = useQueryClient();
+  const orderMutation = useMutation({
+    mutationFn: postOrder,
+    onSuccess: () => queryClient.invalidateQueries({ queryKey: ["orders"] }),
+  });
 
   // Nothing to pay for: go back to the cart (but not right after a successful order).
   if (cart.isEmpty && !placedOrder) return <Navigate to="/cart" replace />;

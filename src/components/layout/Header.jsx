@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import ThemeToggle from "./ThemeToggle";
 
 const navClass = ({ isActive }) =>
-  `rounded-lg px-2 py-1.5 text-sm sm:px-3 font-semibold transition-colors ${
+  `rounded-lg px-1.5 py-1.5 text-sm sm:px-3 font-semibold transition-colors ${
     isActive ? "bg-accent-soft text-accent" : "text-muted hover:text-fg"
   }`;
 
@@ -15,11 +15,11 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-line bg-bg/85 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-2 px-4 py-3 sm:gap-4">
-        <Link to="/" className="font-display text-lg font-extrabold tracking-tight sm:text-xl">
+        <Link to="/" className="font-display text-base font-extrabold tracking-tight sm:text-xl">
           <span className="bg-gradient-to-r from-accent to-accent-2 bg-clip-text text-transparent">AFTERGLOW</span>
         </Link>
 
-        <nav aria-label="Main" className="flex items-center gap-1">
+        <nav aria-label="Main" className="flex items-center gap-0.5 sm:gap-1">
           <NavLink to="/" end className={navClass}>
             Shop
           </NavLink>
@@ -28,6 +28,9 @@ export default function Header() {
             {cart.totalQty > 0 && (
               <span className="ml-1.5 rounded-full bg-accent px-1.5 py-0.5 text-xs text-on-accent">{cart.totalQty}</span>
             )}
+          </NavLink>
+          <NavLink to="/profile" className={navClass}>
+            Profile
           </NavLink>
           <NavLink to="/admin" className={navClass}>
             Admin

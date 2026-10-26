@@ -1,5 +1,5 @@
 import { useInfiniteQuery, useQuery } from "@tanstack/react-query";
-import { fetchAllProducts, fetchCategories, fetchProduct, fetchProductsPage } from "../api/shopApi";
+import { fetchAllProducts, fetchCategories, fetchOrder, fetchOrdersByEmail, fetchProduct, fetchProductsPage } from "../api/shopApi";
 
 export function useCategories() {
   return useQuery({
@@ -33,5 +33,20 @@ export function useAllProducts() {
   return useQuery({
     queryKey: ["admin-products"],
     queryFn: ({ signal }) => fetchAllProducts(signal),
+  });
+}
+
+export function useUserOrders(email) {
+  return useQuery({
+    queryKey: ["orders", email],
+    queryFn: ({ signal }) => fetchOrdersByEmail(email, signal),
+  });
+}
+
+export function useOrder(id) {
+  return useQuery({
+    queryKey: ["order", id],
+    queryFn: ({ signal }) => fetchOrder(id, signal),
+    retry: (count, error) => error.status !== 404 && count < 2,
   });
 }

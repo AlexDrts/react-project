@@ -1,5 +1,6 @@
 import { useMemo } from "react";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { useOutletContext } from "react-router-dom";
 import { removeCategory } from "../../api/shopApi";
 import { useConfirm } from "../../hooks/useConfirm";
 import { useAllProducts, useCategories } from "../../hooks/useShopQueries";
@@ -10,7 +11,8 @@ import Loader from "../ui/Loader";
 import AdminCategoryTable from "./AdminCategoryTable";
 import CategoryForm from "./CategoryForm";
 
-export default function AdminCategories({ editor, dispatch }) {
+export default function AdminCategories() {
+  const { editor, dispatch } = useOutletContext();
   const queryClient = useQueryClient();
   const categories = useCategories();
   const products = useAllProducts();

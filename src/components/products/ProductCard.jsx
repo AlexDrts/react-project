@@ -33,7 +33,7 @@ export default function ProductCard({ product }) {
 
   return (
     <article className="panel group flex flex-col overflow-hidden transition-colors hover:border-accent">
-      <Link to={`/product/${product.id}`} className="relative block" aria-label={product.name}>
+      <Link to={`/products/${product.id}`} className="relative block" aria-label={product.name}>
         <ProductImage product={product} className="aspect-[4/5] transition-transform duration-500 group-hover:scale-[1.03]" />
         <div className="absolute left-3 top-3 flex flex-col items-start gap-1.5">
           {product.isOnSale && <Badge $variant="sale">-{product.discountPercent}%</Badge>}
@@ -44,7 +44,7 @@ export default function ProductCard({ product }) {
       <div className="flex flex-1 flex-col gap-2 p-4">
         <div className="flex items-start justify-between gap-2">
           <h3 className="text-base font-bold leading-snug">
-            <Link to={`/product/${product.id}`} className="hover:text-accent">
+            <Link to={`/products/${product.id}`} className="hover:text-accent">
               {product.name}
             </Link>
           </h3>

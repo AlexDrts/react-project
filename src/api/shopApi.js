@@ -133,6 +133,11 @@ export const removeCategory = (id) => request(`/categories/${id}`, { method: "DE
 
 export const postOrder = (payload) => request("/orders", { method: "POST", body: payload });
 
+export const fetchOrdersByEmail = (email, signal) =>
+  request(`/orders?customer.email=${encodeURIComponent(email)}&_sort=createdAt&_order=desc`, { signal });
+
+export const fetchOrder = (id, signal) => request(`/orders/${id}`, { signal });
+
 export const fetchUsers = (signal) => request("/users", { signal });
 
 export const registerUser = (user) => request("/users", { method: "POST", body: user });
