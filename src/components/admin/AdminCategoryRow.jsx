@@ -1,5 +1,3 @@
-import ConfirmButton from "../ui/ConfirmButton";
-
 export default function AdminCategoryRow({ category, productCount, onEdit, onDelete, busy }) {
   return (
     <tr className="border-t border-line">
@@ -15,7 +13,15 @@ export default function AdminCategoryRow({ category, productCount, onEdit, onDel
             Edit
           </button>
           {/* A category that still has products can't be deleted: they would become unreachable. */}
-          <ConfirmButton onConfirm={() => onDelete(category)} disabled={busy || productCount > 0} />
+          <button
+            type="button"
+            className="btn btn-danger btn-sm"
+            onClick={() => onDelete(category)}
+            disabled={busy || productCount > 0}
+            title={productCount > 0 ? "Move or delete the products in this category first" : undefined}
+          >
+            Delete
+          </button>
         </div>
       </td>
     </tr>

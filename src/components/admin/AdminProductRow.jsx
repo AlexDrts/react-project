@@ -1,5 +1,4 @@
 import Badge from "../ui/Badge";
-import ConfirmButton from "../ui/ConfirmButton";
 
 export default function AdminProductRow({ product, categoryName, onEdit, onDelete, busy }) {
   return (
@@ -13,7 +12,9 @@ export default function AdminProductRow({ product, categoryName, onEdit, onDelet
           <button type="button" className="btn btn-ghost btn-sm" onClick={() => onEdit(product)} disabled={busy}>
             Edit
           </button>
-          <ConfirmButton onConfirm={() => onDelete(product)} disabled={busy} />
+          <button type="button" className="btn btn-danger btn-sm" onClick={() => onDelete(product)} disabled={busy}>
+            Delete
+          </button>
         </div>
       </td>
     </tr>

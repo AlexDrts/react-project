@@ -1,7 +1,9 @@
 import { useMemo } from "react";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { removeCategory } from "../../api/shopApi";
+import { useConfirm } from "../../hooks/useConfirm";
 import { useAllProducts, useCategories } from "../../hooks/useShopQueries";
+import ConfirmDialog from "../ui/ConfirmDialog";
 import EmptyState from "../ui/EmptyState";
 import ErrorMessage from "../ui/ErrorMessage";
 import Loader from "../ui/Loader";
@@ -12,6 +14,7 @@ export default function AdminCategories({ editor, dispatch }) {
   const queryClient = useQueryClient();
   const categories = useCategories();
   const products = useAllProducts();
+  const confirmDelete = useConfirm();
 
   const deleteMutation = useMutation({
     mutationFn: (category) => removeCategory(category.id),
@@ -51,9 +54,21 @@ export default function AdminCategories({ editor, dispatch }) {
           counts={counts}
           busy={deleteMutation.isPending}
           onEdit={(category) => dispatch({ type: "open_editor", kind: "category", item: category })}
-          onDelete={(category) => deleteMutation.mutate(category)}
+          onDelete={confirmDelete.ask}
         />
       )}
+
+      <ConfirmDialog
+        open={confirmDelete.open}
+        title={`Delete the ${confirmDelete.target?.name ?? ""} category?`}
+        description="Only empty categories can be deleted, so no products are affected."
+        confirmLabel="Delete category"
+        onClose={confirmDelete.close}
+        onConfirm={() => {
+          deleteMutation.mutate(confirmDelete.target);
+          confirmDelete.close();
+        }}
+      />
 
       {editing && (
         <CategoryForm
