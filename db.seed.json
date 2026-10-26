@@ -873,13 +873,6 @@
       "material": "Lambswool"
     }
   ],
-  "users": [
-    {
-      "id": 1,
-      "name": "Alex",
-      "email": "alex@afterglow.dev",
-      "role": "admin"
-    }
-  ],
+  "users": [],
   "orders": []
 }
