@@ -1,4 +1,5 @@
-const BASE_URL = "/api";
+// Comes from .env (VITE_API_URL). Restart `npm start` after changing it.
+const API_URL = import.meta.env.VITE_API_URL;
 const DEFAULT_TIMEOUT = 8000;
 
 export class ApiError extends Error {
@@ -21,7 +22,7 @@ export async function request(path, { method = "GET", body, signal, timeout = DE
   signal?.addEventListener("abort", onOuterAbort);
 
   try {
-    const response = await fetch(`${BASE_URL}${path}`, {
+    const response = await fetch(`${API_URL}${path}`, {
       method,
       headers: body ? { "Content-Type": "application/json" } : undefined,
       body: body ? JSON.stringify(body) : undefined,
