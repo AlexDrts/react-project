@@ -1,14 +1,17 @@
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { useCart } from "../hooks/useCart";
+import { useConfirm } from "../hooks/useConfirm";
 import { clearCart } from "../store/cartSlice";
 import CartList from "../components/cart/CartList";
 import CartSummary from "../components/cart/CartSummary";
+import ConfirmDialog from "../components/ui/ConfirmDialog";
 import EmptyState from "../components/ui/EmptyState";
 
 export default function CartPage() {
   const cart = useCart();
   const dispatch = useDispatch();
+  const confirmClear = useConfirm();
 
   if (cart.isEmpty) {
     return (
@@ -26,7 +29,7 @@ export default function CartPage() {
       <div className="grid grid-cols-[minmax(0,1fr)] gap-6 lg:grid-cols-[minmax(0,1fr)_20rem]">
         <div>
           <CartList items={cart.items} />
-          <button type="button" className="mt-4 text-sm text-muted underline hover:text-danger" onClick={() => dispatch(clearCart())}>
+          <button type="button" className="mt-4 text-sm text-muted underline hover:text-danger" onClick={() => confirmClear.ask(true)}>
             Clear cart
           </button>
         </div>
@@ -40,6 +43,18 @@ export default function CartPage() {
           </Link>
         </CartSummary>
       </div>
+
+      <ConfirmDialog
+        open={confirmClear.open}
+        title="Clear your cart?"
+        description={`All ${cart.totalQty} items will be removed from the cart.`}
+        confirmLabel="Clear cart"
+        onClose={confirmClear.close}
+        onConfirm={() => {
+          dispatch(clearCart());
+          confirmClear.close();
+        }}
+      />
     </>
   );
 }
