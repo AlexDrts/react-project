@@ -1,6 +1,6 @@
 // Comes from .env (VITE_API_URL). Restart `npm start` after changing it.
 const API_URL = import.meta.env.VITE_API_URL;
-const DEFAULT_TIMEOUT = 8000;
+const DEFAULT_TIMEOUT = Number(import.meta.env.VITE_API_TIMEOUT) || 8000;
 
 export class ApiError extends Error {
   /** status 0 = the server could not be reached (network error or timeout) */

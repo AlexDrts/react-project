@@ -9,6 +9,7 @@ export default defineConfig(({ mode }) => {
   const apiPath = env.VITE_API_URL || "/api";
 
   return {
+    base: env.VITE_BASE || "/",
     plugins: [react(), tailwindcss()],
     server: {
       open: true,
